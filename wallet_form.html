@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Entry</title>
+</head>
+<body>
+<style>
+      .button {
+        display: inline-grid;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: green;
+        border-radius: 4px;
+        outline: none;
+      }
+    </style>
+<h1>Create Entry</h1>
+<a href="{% url 'walletlist' %}" class="button">Go Back</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

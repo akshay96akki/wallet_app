@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Confirmation</title>
+</head>
+<body>
+<style>
+      .button {
+        display: inline-grid;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: green;
+        border-radius: 4px;
+        outline: none;
+      }
+    </style>
+<br>
+<a href="{% url 'walletlist' %}" class="button">Go Back</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to delete entry?</p>
+    <input type="submit" value="Delete">
+</form>
+</body>
+</html>
